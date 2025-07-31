@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>國立成功大學114 vs 115學年度招生名額比對</title>
+  <style>
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    .search-container {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      width: 300px;
+      font-size: 18px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+      font-size: 18px;
+    }
+    th {
+      background: #34495e;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+    .increase {
+      color: green;
+      font-weight: bold;
+    }
+    .decrease {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>國立成功大學 114 vs 115 學年度招生名額差異</h1>
+
+  <!-- 插入115學年度學士班單獨招生重要日程表 -->
+  <table>
+    <thead>
+      <tr>
+        <th>項目</th>
+        <th>日期</th>
+        <th>備註</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>簡章公告</td><td>2025年7月28日（一）</td><td></td></tr>
+      <tr><td>網路報名時間（含繳費）</td><td>自2025年8月11日（一）14:00 至2025年10月13日（一）17:00</td><td></td></tr>
+      <tr><td>錄取結果公告（正備取名單）</td><td>2025年12月19日（五）</td><td></td></tr>
+      <tr><td>正備取生入學意願回覆截止</td><td>2025年12月29日（一）17:00</td><td></td></tr>
+      <tr><td>入學名單公告</td><td>2026年1月6日（二）</td><td></td></tr>
+      <tr><td>寄發錄取通知書</td><td>2026年4月底前</td><td></td></tr>
+      <tr><td>正式上課日</td><td>秋季班：2026年9月<br>春季班：2027年2月</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="search-container">
+    <input type="text" id="search" placeholder="輸入學系名稱搜尋..." onkeyup="searchTable()">
+  </div>
+
+  <table id="compareTable">
+    <thead>
+      <tr>
+        <th>學院 / 學系</th>
+        <th>114學年度名額</th>
+        <th>115學年度名額</th>
+        <th>名額變動</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>中國文學系</td><td>3</td><td>3</td><td>0</td></tr>
+      <tr><td>外國語文學系</td><td>3</td><td>3</td><td>0</td></tr>
+      <tr><td>歷史學系</td><td>4</td><td>4</td><td>0</td></tr>
+      <tr><td>台灣文學系</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>數學系</td><td>1</td><td>3</td><td class="increase">+2</td></tr>
+      <tr><td>物理學系</td><td>2</td><td>4</td><td class="increase">+2</td></tr>
+      <tr><td>化學系</td><td>3</td><td>3</td><td>0</td></tr>
+      <tr><td>地球科學系</td><td>5</td><td>5</td><td>0</td></tr>
+      <tr><td>光電科學與工程學系</td><td>3</td><td>3</td><td>0</td></tr>
+      <tr><td>機械工程學系</td><td>6</td><td>6</td><td>0</td></tr>
+      <tr><td>機械工程學系（普渡雙聯組）</td><td>2</td><td>2</td><td>0</td></tr>
+      <tr><td>化學工程學系</td><td>4</td><td>4</td><td>0</td></tr>
+      <tr><td>資源工程學系</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>材料科學及工程學系</td><td>5</td><td>5</td><td>0</td></tr>
+      <tr><td>土木工程學系</td><td>8</td><td>8</td><td>0</td></tr>
+      <tr><td>水利及海洋工程學系</td><td>2</td><td>2</td><td>0</td></tr>
+      <tr><td>工程科學系</td><td>3</td><td>3</td><td>0</td></tr>
+      <tr><td>系統及船舶機電工程學系</td><td>4</td><td>2</td><td class="decrease">-2</td></tr>
+      <tr><td>航空太空工程學系</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>能源工程國際學士學位學程</td><td>5</td><td>5</td><td>0</td></tr>
+      <tr><td>環境工程學系</td><td>2</td><td>2</td><td>0</td></tr>
+      <tr><td>測量及空間資訊學系</td><td>4</td><td>4</td><td>0</td></tr>
+      <tr><td>生物醫學工程學系</td><td>10</td><td>10</td><td>0</td></tr>
+      <tr><td>電機工程學系</td><td>3</td><td>5</td><td class="increase">+2</td></tr>
+      <tr><td>電機工程學系（普渡雙聯組）</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>資訊工程學系</td><td>1</td><td>3</td><td class="increase">+2</td></tr>
+      <tr><td>資訊工程學系（普渡雙聯組）</td><td>2</td><td>1</td><td class="decrease">-1</td></tr>
+      <tr><td>建築學系</td><td>1</td><td>3</td><td class="increase">+2</td></tr>
+      <tr><td>都市計劃學系</td><td>3</td><td>3</td><td>0</td></tr>
+      <tr><td>工業設計學系</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>會計學系</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>統計學系</td><td>4</td><td>4</td><td>0</td></tr>
+      <tr><td>工業與資訊管理學系</td><td>2</td><td>2</td><td>0</td></tr>
+      <tr><td>企業管理學系</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>交通管理科學系</td><td>2</td><td>2</td><td>0</td></tr>
+      <tr><td>法律學系</td><td>3</td><td>3</td><td>0</td></tr>
+      <tr><td>政治學系</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>經濟學系</td><td>1</td><td>3</td><td class="increase">+2</td></tr>
+      <tr><td>心理學系</td><td>1</td><td>6</td><td class="increase">+5</td></tr>
+      <tr><td>生命科學系</td><td>4</td><td>4</td><td>0</td></tr>
+      <tr><td>生物科技與產業科學系</td><td>12</td><td>12</td><td>0</td></tr>
+      <tr><td>護理學系</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>醫學檢驗生物技術學系</td><td>2</td><td>2</td><td>0</td></tr>
+      <tr><td>醫學系（六年制）</td><td>3</td><td>3</td><td>0</td></tr>
+      <tr><td>物理治療學系</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>職能治療學系</td><td>2</td><td>2</td><td>0</td></tr>
+      <tr><td>藥學系（六年制）</td><td>3</td><td>3</td><td>0</td></tr>
+      <tr><td>牙醫學系（六年制）</td><td>2</td><td>2</td><td>0</td></tr>
+      <tr><td>公共衛生學系（全英語授課）</td><td>4</td><td>4</td><td>0</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    function searchTable() {
+      const input = document.getElementById("search");
+      const filter = input.value.toLowerCase();
+      const table = document.getElementById("compareTable");
+      const trs = table.getElementsByTagName("tr");
+      
+      for (let i = 1; i < trs.length; i++) {
+        const tds = trs[i].getElementsByTagName("td");
+        if (tds.length > 0) {
+          const text = tds[0].textContent || tds[0].innerText;
+          trs[i].style.display = text.toLowerCase().indexOf(filter) > -1 ? "" : "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
